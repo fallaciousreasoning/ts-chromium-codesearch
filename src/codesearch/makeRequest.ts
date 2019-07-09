@@ -1,4 +1,5 @@
 import { CombinedRequest } from "./model/requests";
+import fetch from "node-fetch";
 
 const serializeValue = (typename: string, value: any) => {
     const type = typeof value;
@@ -48,5 +49,5 @@ export const makeRequest = (request: CombinedRequest) => {
 
     const queryString = serializeObject('', request);
     const requestUrl = `${codeSearchUrl}/${name}:1?${queryString}`;
-    console.log(requestUrl);
+    return fetch(requestUrl);
 }

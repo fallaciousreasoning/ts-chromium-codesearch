@@ -10,5 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jay.harris@outlook.co.nz",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/node-fetch": "^2.3.7",
+    "node-fetch": "^2.6.0"
+  }
 }
