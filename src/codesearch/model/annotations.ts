@@ -1,4 +1,5 @@
 import { InternalLink } from "./internalLink";
+import { AnnotationType } from "./AnnotationType";
 
 export interface AnnotationsResponse {
     annotation_response: {
