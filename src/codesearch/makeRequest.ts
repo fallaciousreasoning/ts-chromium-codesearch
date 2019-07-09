@@ -43,6 +43,8 @@ export const makeRequest = (request: CombinedRequest) => {
     let name: string;
     if (request.annotation_request) {
         name = `annotation_request`;
+    } else if (request.xref_search_request) {
+        name = `xref_search_request`
     } else {
         throw new Error("Unsupported request");
     }

@@ -7,7 +7,7 @@ export const getAnnotationsForFile = async (filePath: string,
     annotationTypes = [
         AnnotationTypeValue.XREF_SIGNATURE,
         AnnotationTypeValue.LINK_TO_DEFINITION
-    ]): Promise<Annotation[]> => {
+    ]) => {
 
     const response: AnnotationsResponse = await makeRequest({
         annotation_request: {
@@ -19,5 +19,5 @@ export const getAnnotationsForFile = async (filePath: string,
         }
     }) as any;
 
-    return response.annotation_response[0].annotation;
+    return response.annotation_response[0];
 };

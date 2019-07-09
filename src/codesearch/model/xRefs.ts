@@ -1,9 +1,21 @@
 import { FileSpec } from "./fileInfo";
 import { Match } from "./match";
 
+export interface XRefSignature {
+    signature: string;
+    signature_hash: string;
+    highlight_signature: string;
+}
+
 export interface XRefSearchRequestResponse {
     xref_search_response: [XRefSearchRequestResponseItem];
     elapsed_ms: number;
+}
+
+export interface XRefSearchRequest {
+    file_spec: FileSpec;
+    max_num_results: number;
+    query: string;
 }
 
 interface TypeCount {

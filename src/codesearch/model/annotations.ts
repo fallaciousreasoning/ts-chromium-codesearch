@@ -1,5 +1,6 @@
 import { InternalLink } from "./internalLink";
 import { FileSpec } from "./fileInfo";
+import { XRefSignature } from "./xRefs";
 
 export interface AnnotationsResponse {
     annotation_response: {
@@ -17,7 +18,8 @@ export interface AnnotationType {
 export interface Annotation {
     type: AnnotationType;
     range: Range;
-    internal_link: InternalLink;
+    internal_link?: InternalLink;
+    xref_signature: XRefSignature;
     kythe_xref_kind: number;
 }
 
