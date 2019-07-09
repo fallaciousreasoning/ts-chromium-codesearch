@@ -2,7 +2,7 @@
   "name": "ts-codesearch",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "out/index.js",
   "devDependencies": {
     "typescript": "^3.5.3"
   },
