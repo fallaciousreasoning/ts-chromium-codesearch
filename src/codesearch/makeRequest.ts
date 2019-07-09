@@ -13,6 +13,10 @@ const serializeValue = (typename: string, value: any) => {
         return serializeObject(typename, value);
     }
 
+    // Make sure strings are url encoded.
+    if (type == "string")
+        value = encodeURIComponent(value);
+
     // Must be a primitive:
     return `${typename}=${value}`;
 }
