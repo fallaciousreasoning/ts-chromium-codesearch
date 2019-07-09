@@ -24,5 +24,5 @@ export interface Annotation {
 export interface AnnotationRequest {
     file_spec: FileSpec;
     type: AnnotationType[];
-    md5: string;
+    md5?: string;
 }
