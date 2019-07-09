@@ -1,4 +1,4 @@
-import { getAnnotationsForFile } from "./codesearch/annotationsHelper";
+import { getAnnotations } from "./codesearch/annotationsHelper";
 import { AnnotationTypeValue } from "./codesearch/model/annotationTypeValue";
 import { getXRefFor, xRefToString } from "./codesearch/xRefsHelper";
 import { FileSpec } from "./codesearch/model/fileInfo";
@@ -9,7 +9,7 @@ const main = async () => {
         package_name: 'chromium'
     };
 
-    const annotations = await getAnnotationsForFile(fileSpec.name);
+    const annotations = await getAnnotations(fileSpec);
     const firstXRef = annotations.annotation.find(a => a.xref_signature)!;
 
     const xrefs = await getXRefFor(fileSpec, firstXRef);

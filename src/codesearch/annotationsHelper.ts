@@ -3,7 +3,7 @@ import { AnnotationType, Annotation, AnnotationRequest, AnnotationsResponse } fr
 import { FileSpec } from "./model/fileInfo";
 import { makeRequest } from "./makeRequest";
 
-export const getAnnotationsForFile = async (filePath: string,
+export const getAnnotations = async (fileSpec: FileSpec,
     annotationTypes = [
         AnnotationTypeValue.XREF_SIGNATURE,
         AnnotationTypeValue.LINK_TO_DEFINITION
@@ -11,10 +11,7 @@ export const getAnnotationsForFile = async (filePath: string,
 
     const response: AnnotationsResponse = await makeRequest({
         annotation_request: {
-            file_spec: {
-                name: filePath,
-                package_name: 'chromium'
-            },
+            file_spec: fileSpec,
             type: annotationTypes.map(t => ({ id: t }))
         }
     }) as any;
