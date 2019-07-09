@@ -49,5 +49,5 @@ export const makeRequest = (request: CombinedRequest) => {
 
     const queryString = serializeObject('', request);
     const requestUrl = `${codeSearchUrl}/${name}:1?${queryString}`;
-    return fetch(requestUrl);
+    return fetch(requestUrl).then(response => response.json());
 }
