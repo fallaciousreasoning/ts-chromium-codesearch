@@ -1,5 +1,5 @@
 import { InternalLink } from "./internalLink";
-import { AnnotationType } from "./AnnotationType";
+import { FileSpec } from "./fileInfo";
 
 export interface AnnotationsResponse {
     annotation_response: {
@@ -19,4 +19,10 @@ export interface Annotation {
     range: Range;
     internal_link: InternalLink;
     kythe_xref_kind: number;
+}
+
+export interface AnnotationRequest {
+    file_spec: FileSpec;
+    type: AnnotationType[];
+    md5: string;
 }

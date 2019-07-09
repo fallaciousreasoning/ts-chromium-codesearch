@@ -1,4 +1,4 @@
-export enum AnnotationType {
+export enum AnnotationTypeValue {
     BLAME = 0x00040,
     CODE_FINDINGS = 0x40000,
     COMPILER = 0x00080,

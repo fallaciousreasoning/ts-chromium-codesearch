@@ -1,4 +1,4 @@
-import { FileInfo } from "./fileInfo";
+import { FileSpec } from "./fileInfo";
 import { Match } from "./match";
 
 export interface XRefSearchRequestResponse {
@@ -21,6 +21,6 @@ interface XRefSearchRequestResponseItem {
 }
 
 interface XRefSearchResult {
-    file: FileInfo;
+    file: FileSpec;
     match: Match[];
 }
