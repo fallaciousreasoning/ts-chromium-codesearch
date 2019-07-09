@@ -1,0 +1,14 @@
+{
+  "name": "ts-codesearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jay.harris@outlook.co.nz",
+  "license": "MIT"
+}
