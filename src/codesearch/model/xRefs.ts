@@ -32,7 +32,7 @@ interface XRefSearchRequestResponseItem {
     eliminated_type_count: TypeCount[];
 }
 
-interface XRefSearchResult {
+export interface XRefSearchResult {
     file: FileSpec;
     match: Match[];
 }
